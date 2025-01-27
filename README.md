@@ -1,6 +1,6 @@
 # FlowerTune LLM on Code Dataset
 
-This directory conducts federated instruction tuning with a pretrained [Mistral-7B](https://huggingface.co/mistralai/Mistral-7B-v0.3) model on a [Code dataset](https://huggingface.co/datasets/lucasmccabe-lmi/CodeAlpaca-20k).
+This directory conducts federated instruction tuning with a pretrained [Qwen/Qwen2.5-Coder-0.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B-Instruct) model on a [Code dataset](https://huggingface.co/datasets/lucasmccabe-lmi/CodeAlpaca-20k).
 We use [Flower Datasets](https://flower.dev/docs/datasets/) to download, partition and preprocess the dataset.
 Flower's Simulation Engine is used to simulate the LLM fine-tuning process in federated way,
 which allows users to perform the training on a single GPU.
@@ -8,10 +8,54 @@ which allows users to perform the training on a single GPU.
 
 ## Methodology
 
-This baseline performs federated LLM fine-tuning with [LoRA](https://arxiv.org/pdf/2106.09685) using the [🤗PEFT](https://huggingface.co/docs/peft/en/index) library.
-The clients' models are aggregated with FedAvg strategy.
+This baseline performs federated LLM fine-tuning with [DoRA](https://arxiv.org/abs/2402.09353) using the [🤗PEFT](https://huggingface.co/docs/peft/en/index) library.
+The clients' models are aggregated with `FedAvg` strategy.
 This provides a baseline performance for the leaderboard of Code challenge.
 
+### Qwen/Qwen2.5-Coder-0.5B-Instruct
+
+For the **Qwen/Qwen2.5-Coder-0.5B-Instruct** model I adopted the following fine-tuning methodology:
+
+- **Precision**: `bf16` for model weights.
+- **Quantization**: `4-bit` quantization for reduced memory usage.
+- **Optimizer**: `paged_adamw_8bit`
+- **[DoRA](https://arxiv.org/abs/2402.09353) Configuration**:
+  - Rank (r): `32`
+  - Alpha: `64`
+  - Target Modules:
+    - `down_proj`,
+    - `gate_up_proj`,
+    - `o_proj`,
+    - `qkv_proj`,
+- **Training Configuration**:
+  - Batch size: `8`
+  - Maximum number of steps: `10`
+  - Total number of rounds: `100`
+  - Fraction fit per round: `0.2`
+- **Learning Rate Scheduler**:
+  - Cosine Annealing over rounds, where:
+    - Maximum LR: `5e-5`
+    - Minimum LR: `5e-6`
+  - Constant learning rate scheduler over steps
+- **Strategy**: `FedAvg`
+
+### Training Loss Visualization
+
+Below is the training loss plot from the experiment:
+
+![Training Loss](flowertune-eval-code/train_loss.png)
+
+### Evaluation Results (Accuracy)
+
+- **MBPP**:  21.20 %
+- **HumanEval**: 36.59 %
+- **MultiPL-E (JS)**: 40.38 %
+- **MultiPL-E (C++)**: 33.55 %
+- **Average**: 33.00 %
+
+### Communication Budget
+
+8766.51 MB Megabytes
 
 ## Environments setup
 
@@ -24,7 +68,7 @@ pip install -e .
 ## Experimental setup
 
 The dataset is divided into 10 partitions in an IID fashion, a partition is assigned to each ClientApp.
-We randomly sample a fraction (0.2) of the total nodes to participate in each round, for a total of `200` rounds.
+We randomly sample a fraction (0.2) of the total nodes to participate in each round, for a total of `100` rounds.
 All settings are defined in `pyproject.toml`.
 
 > [!IMPORTANT]
@@ -33,13 +77,6 @@ All settings are defined in `pyproject.toml`.
 
 ## Running the challenge
 
-First make sure that you have got the access to [Mistral-7B](https://huggingface.co/mistralai/Mistral-7B-v0.3) model with your Hugging-Face account. You can request access directly from the Hugging-Face website.
-Then, follow the instruction [here](https://huggingface.co/docs/huggingface_hub/en/quick-start#login-command) to log in your account. Note you only need to complete this stage once in your development machine:
-
-```bash
-huggingface-cli login
-```
-
 Run the challenge with default config values.
 The configs are defined in `[tool.flwr.app.config]` entry of `pyproject.toml`, and are loaded automatically.
 
@@ -47,16 +84,9 @@ The configs are defined in `[tool.flwr.app.config]` entry of `pyproject.toml`, a
 flwr run
 ```
 
-## VRAM consumption
+## Running the evaluation
 
-We use Mistral-7B model with 4-bit quantization as default. The estimated VRAM consumption per client for each challenge is shown below:
-
-| Challenges | GeneralNLP |   Finance  |   Medical  |    Code    |
-| :--------: | :--------: | :--------: | :--------: | :--------: |
-|    VRAM    | ~25.50 GB  | ~17.30 GB  | ~22.80 GB  | ~17.40 GB  |
-
-You can adjust the CPU/GPU resources you assign to each of the clients based on your device, which are specified with `options.backend.client-resources.num-cpus` and `options.backend.client-resources.num-gpus` under `[tool.flwr.federations.local-simulation]` entry in `pyproject.toml`.
-
+Please check [flowertune-eval-code](https://github.com/ethicalabs-ai/FlowerTune-Qwen2.5-Coder-0.5B-Instruct/tree/main/flowertune-eval-code).
 
 ## Model saving
 
