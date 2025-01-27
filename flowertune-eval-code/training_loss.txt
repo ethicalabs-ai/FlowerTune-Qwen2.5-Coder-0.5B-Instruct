@@ -1,0 +1,210 @@
+INFO :      aggregate_fit: received 2 results and 0 failures
+INFO :      Communication budget: used 8922.66 MB (+44.61 MB this round) / 200,000 MB
+INFO :      fit progress: (100, 0.0, {}, 1924.51894813)
+INFO :      configure_evaluate: no clients selected, skipping evaluation
+INFO :
+INFO :      [SUMMARY]
+INFO :      Run finished 100 round(s) in 1924.52s
+INFO :          History (loss, centralized):
+INFO :                  round 0: 0.0
+INFO :                  round 1: 0.0
+INFO :                  round 2: 0.0
+INFO :                  round 3: 0.0
+INFO :                  round 4: 0.0
+INFO :                  round 5: 0.0
+INFO :                  round 6: 0.0
+INFO :                  round 7: 0.0
+INFO :                  round 8: 0.0
+INFO :                  round 9: 0.0
+INFO :                  round 10: 0.0
+INFO :                  round 11: 0.0
+INFO :                  round 12: 0.0
+INFO :                  round 13: 0.0
+INFO :                  round 14: 0.0
+INFO :                  round 15: 0.0
+INFO :                  round 16: 0.0
+INFO :                  round 17: 0.0
+INFO :                  round 18: 0.0
+INFO :                  round 19: 0.0
+INFO :                  round 20: 0.0
+INFO :                  round 21: 0.0
+INFO :                  round 22: 0.0
+INFO :                  round 23: 0.0
+INFO :                  round 24: 0.0
+INFO :                  round 25: 0.0
+INFO :                  round 26: 0.0
+INFO :                  round 27: 0.0
+INFO :                  round 28: 0.0
+INFO :                  round 29: 0.0
+INFO :                  round 30: 0.0
+INFO :                  round 31: 0.0
+INFO :                  round 32: 0.0
+INFO :                  round 33: 0.0
+INFO :                  round 34: 0.0
+INFO :                  round 35: 0.0
+INFO :                  round 36: 0.0
+INFO :                  round 37: 0.0
+INFO :                  round 38: 0.0
+INFO :                  round 39: 0.0
+INFO :                  round 40: 0.0
+INFO :                  round 41: 0.0
+INFO :                  round 42: 0.0
+INFO :                  round 43: 0.0
+INFO :                  round 44: 0.0
+INFO :                  round 45: 0.0
+INFO :                  round 46: 0.0
+INFO :                  round 47: 0.0
+INFO :                  round 48: 0.0
+INFO :                  round 49: 0.0
+INFO :                  round 50: 0.0
+INFO :                  round 51: 0.0
+INFO :                  round 52: 0.0
+INFO :                  round 53: 0.0
+INFO :                  round 54: 0.0
+INFO :                  round 55: 0.0
+INFO :                  round 56: 0.0
+INFO :                  round 57: 0.0
+INFO :                  round 58: 0.0
+INFO :                  round 59: 0.0
+INFO :                  round 60: 0.0
+INFO :                  round 61: 0.0
+INFO :                  round 62: 0.0
+INFO :                  round 63: 0.0
+INFO :                  round 64: 0.0
+INFO :                  round 65: 0.0
+INFO :                  round 66: 0.0
+INFO :                  round 67: 0.0
+INFO :                  round 68: 0.0
+INFO :                  round 69: 0.0
+INFO :                  round 70: 0.0
+INFO :                  round 71: 0.0
+INFO :                  round 72: 0.0
+INFO :                  round 73: 0.0
+INFO :                  round 74: 0.0
+INFO :                  round 75: 0.0
+INFO :                  round 76: 0.0
+INFO :                  round 77: 0.0
+INFO :                  round 78: 0.0
+INFO :                  round 79: 0.0
+INFO :                  round 80: 0.0
+INFO :                  round 81: 0.0
+INFO :                  round 82: 0.0
+INFO :                  round 83: 0.0
+INFO :                  round 84: 0.0
+INFO :                  round 85: 0.0
+INFO :                  round 86: 0.0
+INFO :                  round 87: 0.0
+INFO :                  round 88: 0.0
+INFO :                  round 89: 0.0
+INFO :                  round 90: 0.0
+INFO :                  round 91: 0.0
+INFO :                  round 92: 0.0
+INFO :                  round 93: 0.0
+INFO :                  round 94: 0.0
+INFO :                  round 95: 0.0
+INFO :                  round 96: 0.0
+INFO :                  round 97: 0.0
+INFO :                  round 98: 0.0
+INFO :                  round 99: 0.0
+INFO :                  round 100: 0.0
+INFO :          History (metrics, distributed, fit):
+INFO :          {'train_loss': [(1, 0.8666237607598305),
+INFO :                          (2, 0.7659441858530044),
+INFO :                          (3, 0.6184230685234071),
+INFO :                          (4, 0.6669361099600791),
+INFO :                          (5, 0.6574282974004745),
+INFO :                          (6, 0.6188080728054046),
+INFO :                          (7, 0.698212053414141),
+INFO :                          (8, 0.6704954534769058),
+INFO :                          (9, 0.6719857075181644),
+INFO :                          (10, 0.5803292572498321),
+INFO :                          (11, 0.6653513446450233),
+INFO :                          (12, 0.6682511396339621),
+INFO :                          (13, 0.5869034856557847),
+INFO :                          (14, 0.6413328541701802),
+INFO :                          (15, 0.6034903496503831),
+INFO :                          (16, 0.5691400796175002),
+INFO :                          (17, 0.56856320053339),
+INFO :                          (18, 0.5325095966458321),
+INFO :                          (19, 0.5854391045868397),
+INFO :                          (20, 0.5803224622392179),
+INFO :                          (21, 0.6138924954320013),
+INFO :                          (22, 0.4949299670755863),
+INFO :                          (23, 0.599425521766053),
+INFO :                          (24, 0.5628032824296629),
+INFO :                          (25, 0.5470810724967875),
+INFO :                          (26, 0.5023860760033131),
+INFO :                          (27, 0.4814551033079624),
+INFO :                          (28, 0.5406843568029326),
+INFO :                          (29, 0.5253985464572908),
+INFO :                          (30, 0.5688034117221833),
+INFO :                          (31, 0.6007683512460575),
+INFO :                          (32, 0.5004390403628349),
+INFO :                          (33, 0.5604225316386992),
+INFO :                          (34, 0.5354828611016273),
+INFO :                          (35, 0.5272016926747881),
+INFO :                          (36, 0.4659922257065773),
+INFO :                          (37, 0.4855199869722128),
+INFO :                          (38, 0.502228818833828),
+INFO :                          (39, 0.49538065940141685),
+INFO :                          (40, 0.5015130768383338),
+INFO :                          (41, 0.5316912105657189),
+INFO :                          (42, 0.4339397169649601),
+INFO :                          (43, 0.4696544200181961),
+INFO :                          (44, 0.47188351303339005),
+INFO :                          (45, 0.5330374296009541),
+INFO :                          (46, 0.41289572082459924),
+INFO :                          (47, 0.4679573583013184),
+INFO :                          (48, 0.43406905382871624),
+INFO :                          (49, 0.4942469213157893),
+INFO :                          (50, 0.46745808105915787),
+INFO :                          (51, 0.5014242468417137),
+INFO :                          (52, 0.524387589842081),
+INFO :                          (53, 0.5365380252895878),
+INFO :                          (54, 0.4083789548836649),
+INFO :                          (55, 0.48218561202957394),
+INFO :                          (56, 0.5412897812776947),
+INFO :                          (57, 0.41314832968637344),
+INFO :                          (58, 0.4767189968377351),
+INFO :                          (59, 0.5091697014858958),
+INFO :                          (60, 0.4521183501929045),
+INFO :                          (61, 0.49508170895278447),
+INFO :                          (62, 0.4450358908623457),
+INFO :                          (63, 0.532841462552101),
+INFO :                          (64, 0.5032347374875448),
+INFO :                          (65, 0.5216503072352371),
+INFO :                          (66, 0.5052695127807268),
+INFO :                          (67, 0.4758931810009792),
+INFO :                          (68, 0.45625448333720364),
+INFO :                          (69, 0.43117389805177775),
+INFO :                          (70, 0.397939318837598),
+INFO :                          (71, 0.5108282782137393),
+INFO :                          (72, 0.42214738596230744),
+INFO :                          (73, 0.3825539132580161),
+INFO :                          (74, 0.4811588532524183),
+INFO :                          (75, 0.3861475189682096),
+INFO :                          (76, 0.453587576886639),
+INFO :                          (77, 0.4123858347124468),
+INFO :                          (78, 0.5448552034795284),
+INFO :                          (79, 0.4195936950854957),
+INFO :                          (80, 0.378186086169444),
+INFO :                          (81, 0.4913105083629489),
+INFO :                          (82, 0.4806406825780868),
+INFO :                          (83, 0.44480698090046644),
+INFO :                          (84, 0.40860837674845063),
+INFO :                          (85, 0.3730185746215284),
+INFO :                          (86, 0.5154359184537599),
+INFO :                          (87, 0.49441435249166543),
+INFO :                          (88, 0.41056834008242377),
+INFO :                          (89, 0.5071458677594526),
+INFO :                          (90, 0.40758848076220605),
+INFO :                          (91, 0.4651769663905725),
+INFO :                          (92, 0.412308363802731),
+INFO :                          (93, 0.4621530615724624),
+INFO :                          (94, 0.4340328600257635),
+INFO :                          (95, 0.5010226833706863),
+INFO :                          (96, 0.4056927062571049),
+INFO :                          (97, 0.5330928367784202),
+INFO :                          (98, 0.40010714097879824),
+INFO :                          (99, 0.5133679919899179),
+INFO :                          (100, 0.4361450286582112)]}
