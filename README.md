@@ -59,9 +59,11 @@ Below is the training loss plot from the experiment:
 
 ### Virtual Machine Details
 
+For this experiment, I utilized **CUDO Compute** as the GPU compute provider. [Learn more about CUDO Compute](https://www.cudocompute.com/?via=flowertune-llm)
+
 | **Component** | **Specification**    |
 |---------------|----------------------|
-| **GPU**       | 1 × RTX A4000        |
+| **GPU**       | 1 × RTX A4000 16 GB  |
 | **vCPUs**     | 4                    |
 | **CPU**       | AMD EPYC (Milan)     |
 | **Memory**    | 16 GB                |
@@ -94,7 +96,7 @@ Below is the training loss plot from the experiment:
 |-------------------|
 | **$0.3275/hr**    |
 
-#### Simulation Cost
+#### Simulation Details
 
 | **Parameter**      | **Value**              |
 |--------------------|------------------------|
