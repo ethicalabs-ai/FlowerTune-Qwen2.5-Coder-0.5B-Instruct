@@ -57,7 +57,7 @@ Below is the training loss plot from the experiment:
 
 8922.66 MB
 
-## Virtual Machine Details
+### Virtual Machine Details
 
 | **Component** | **Specification**    |
 |---------------|----------------------|
@@ -66,9 +66,9 @@ Below is the training loss plot from the experiment:
 | **CPU**       | AMD EPYC (Milan)     |
 | **Memory**    | 16 GB                |
 
-## Cost Breakdown
+### Cost Breakdown
 
-### Compute Costs
+#### Compute Costs
 
 | **Component** | **Details**   | **Cost/hr** |
 |---------------|---------------|-------------|
@@ -76,25 +76,25 @@ Below is the training loss plot from the experiment:
 | Memory        | 16 GB         | $0.056/hr   |
 | GPU           | 1 × RTX A4000  | $0.25/hr    |
 
-### Storage Costs
+#### Storage Costs
 
 | **Component**    | **Details** | **Cost/hr** |
 |------------------|-------------|-------------|
 | Boot Disk Size   | 70 GB       | $0.0077/hr  |
 
-### Network Costs
+#### Network Costs
 
 | **Component**         | **Details** | **Cost/hr** |
 |-----------------------|-------------|-------------|
 | Public IPv4 Address   | N/A         | $0.005/hr   |
 
-### Total Cost
+#### Total Cost
 
 | **Total Cost/hr** |
 |-------------------|
 | **$0.3275/hr**    |
 
-### Simulation Cost
+#### Simulation Cost
 
 | **Parameter**      | **Value**              |
 |--------------------|------------------------|
