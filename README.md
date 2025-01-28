@@ -57,6 +57,54 @@ Below is the training loss plot from the experiment:
 
 8922.66 MB
 
+## Virtual Machine Details
+
+| **Component** | **Specification**    |
+|---------------|----------------------|
+| **GPU**       | 1 × RTX A4000        |
+| **vCPUs**     | 4                    |
+| **CPU**       | AMD EPYC (Milan)     |
+| **Memory**    | 16 GB                |
+
+## Cost Breakdown
+
+### Compute Costs
+
+| **Component** | **Details**   | **Cost/hr** |
+|---------------|---------------|-------------|
+| vCPUs         | 4 cores       | $0.0088/hr  |
+| Memory        | 16 GB         | $0.056/hr   |
+| GPU           | 1 × RTX A4000  | $0.25/hr    |
+
+### Storage Costs
+
+| **Component**    | **Details** | **Cost/hr** |
+|------------------|-------------|-------------|
+| Boot Disk Size   | 70 GB       | $0.0077/hr  |
+
+### Network Costs
+
+| **Component**         | **Details** | **Cost/hr** |
+|-----------------------|-------------|-------------|
+| Public IPv4 Address   | N/A         | $0.005/hr   |
+
+### Total Cost
+
+| **Total Cost/hr** |
+|-------------------|
+| **$0.3275/hr**    |
+
+### Simulation Cost
+
+| **Parameter**      | **Value**              |
+|--------------------|------------------------|
+| **Runtime**        | 1924.52 seconds (00:32:04) |
+| **Simulation Cost**| **$0.18**              |
+
+   \[
+   \text{Simulation Cost} = 0.5346 \text{ hours} \times \$0.3275/\text{hr} \approx \$0.175 \approx \$0.18
+   \]
+
 ## Environments setup
 
 Project dependencies are defined in `pyproject.toml`. Install them in an activated Python environment with:
