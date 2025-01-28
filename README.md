@@ -101,10 +101,6 @@ Below is the training loss plot from the experiment:
 | **Runtime**        | 1924.52 seconds (00:32:04) |
 | **Simulation Cost**| **$0.18**              |
 
-   \[
-   \text{Simulation Cost} = 0.5346 \text{ hours} \times \$0.3275/\text{hr} \approx \$0.175 \approx \$0.18
-   \]
-
 ## Environments setup
 
 Project dependencies are defined in `pyproject.toml`. Install them in an activated Python environment with:
