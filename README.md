@@ -59,7 +59,7 @@ Below is the training loss plot from the experiment:
 
 ### Virtual Machine Details
 
-For this experiment, I utilized **CUDO Compute** as the GPU compute provider. [Learn more about CUDO Compute](https://www.cudocompute.com/?via=flowertune-llm)
+For this experiment, I utilized [CUDO Compute](https://www.cudocompute.com/?via=flowertune-llm) as the GPU compute provider.
 
 | **Component** | **Specification**    |
 |---------------|----------------------|
