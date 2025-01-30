@@ -8,7 +8,6 @@ The configurations will deploy the required resources, including virtual machine
 
 ### Folder Structure
 
-- `README.md`: Documentation for setting up and using the Terraform configurations.
 - `infra_example`: Example folder containing infrastructure setup for FlowerTune.
 - `modules`: Contains the main module for infrastructure components.
 
@@ -88,6 +87,12 @@ Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-122-generic x86_64)
 ...
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
+```
+
+To remove all infrastructure resources, please run:
+
+```bash
+terraform destroy
 ```
 
 
