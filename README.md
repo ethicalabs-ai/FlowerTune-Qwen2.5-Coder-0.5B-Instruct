@@ -12,7 +12,7 @@ This baseline performs federated LLM fine-tuning with [DoRA](https://arxiv.org/a
 The clients' models are aggregated with `FedAvg` strategy.
 This provides a baseline performance for the leaderboard of Code challenge.
 
-### Qwen/Qwen2.5-Coder-0.5B-Instruct
+### Qwen2.5-Coder-0.5B-Instruct
 
 For the **Qwen/Qwen2.5-Coder-0.5B-Instruct** model I adopted the following fine-tuning methodology:
 
@@ -68,7 +68,7 @@ For this experiment, I utilized [CUDO Compute](https://www.cudocompute.com/?via=
 | **CPU**       | AMD EPYC (Milan)     |
 | **Memory**    | 16 GB                |
 
-For an example on how to set up a GPU computing resource on CUDO Compute by using Terraform, please check [./blob/main/terraform/](./blob/main/terraform/).
+For an example on how to set up a GPU computing resource on CUDO Compute by using Terraform, please check [./terraform/](./terraform/).
 
 ### Cost Breakdown
 
