@@ -68,6 +68,8 @@ For this experiment, I utilized [CUDO Compute](https://www.cudocompute.com/?via=
 | **CPU**       | AMD EPYC (Milan)     |
 | **Memory**    | 16 GB                |
 
+For an example on how to set up a GPU computing resource on CUDO Compute by using Terraform, please check [./blob/main/terraform/](./blob/main/terraform/).
+
 ### Cost Breakdown
 
 #### Compute Costs
