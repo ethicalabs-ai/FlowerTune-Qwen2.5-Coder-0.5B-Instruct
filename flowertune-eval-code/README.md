@@ -30,13 +30,6 @@ nvm install 20
 sudo apt-get install g++
 ```
 
-Then, download the `main.py` script from `bigcode-evaluation-harness` repository.
-
-```shell
-git clone https://github.com/bigcode-project/bigcode-evaluation-harness.git && cd bigcode-evaluation-harness && git checkout 0f3e95f0806e78a4f432056cdb1be93604a51d69 && mv main.py ../ && cd .. && rm -rf bigcode-evaluation-harness
-```
-
-
 ## Generate model answers & calculate pass@1 score
 
 > [!NOTE]
@@ -44,7 +37,7 @@ git clone https://github.com/bigcode-project/bigcode-evaluation-harness.git && c
 
 ```bash
 python main.py \
---model=mistralai/Mistral-7B-v0.3 \
+--model=Qwen/Qwen2.5-Coder-0.5B-Instruct \
 --peft_model=/path/to/fine-tuned-peft-model-dir/  \ # e.g., ./peft_1
 --max_length_generation=1024  \ # change to 2048 when running mbpp
 --batch_size=4 \
