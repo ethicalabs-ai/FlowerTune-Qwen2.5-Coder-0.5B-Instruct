@@ -4,7 +4,7 @@
 
 This folder contains a Terraform configuration to set up infrastructure for FlowerTune on [CUDO Compute](https://www.cudocompute.com/?via=flowertune-llm).
 
-The configurations will deploy the required resources, including virtual machines and networking components, for your FlowerTune experiments.
+The configurations will deploy the required resources for your FlowerTune experiments.
 
 ### Folder Structure
 
