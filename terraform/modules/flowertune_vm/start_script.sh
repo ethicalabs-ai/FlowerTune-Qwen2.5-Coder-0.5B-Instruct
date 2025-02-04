@@ -10,22 +10,11 @@ fi
 
 echo "Running startup script for the first time..."
 
-# Upgrade base system
-apt-get update -y
-apt-get upgrade -y
-
-# Install Python Deps
-apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
-    libreadline-dev libsqlite3-dev curl git libncursesw5-dev xz-utils \
-    tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev \
-    python-is-python3 python3-pip pipx
-
-# Upgrade pip
-pip install -U pip
-
 # Create the flower user
-adduser --disabled-password --gecos ""  --shell /bin/bash flower
+adduser --gecos ""  --shell /bin/bash flower
 usermod -aG sudo flower
+passwd -d flower
+chage -d 0 flower
 echo 'flower  ALL=(ALL:ALL) ALL' >> /etc/sudoers
 
 # Generate an SSH key pair for flower user non-interactively and move the root authorized_keys contents to flower's .ssh.
@@ -41,6 +30,19 @@ if [ -f /root/.ssh/authorized_keys ]; then
     cat /root/.ssh/authorized_keys >> /home/flower/.ssh/authorized_keys
     rm -f /root/.ssh/authorized_keys
 fi
+
+# Upgrade base system
+apt-get update -y
+apt-get upgrade -y
+
+# Install Python Deps
+apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
+    libreadline-dev libsqlite3-dev curl git libncursesw5-dev xz-utils \
+    tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev \
+    python-is-python3 python3-pip pipx
+
+# Upgrade pip
+pip install -U pip
 
 # Fix permissions for flower's .ssh
 chown -R flower:flower /home/flower/.ssh
