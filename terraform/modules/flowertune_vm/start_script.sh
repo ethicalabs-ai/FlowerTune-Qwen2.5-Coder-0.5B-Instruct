@@ -44,12 +44,12 @@ apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
 # Install CUDA 12.6
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin
 mv cuda-ubuntu2204.pin /etc/apt/preferences.d/cuda-repository-pin-600
-https://developer.download.nvidia.com/compute/cuda/12.6.0/local_installers/cuda-repo-ubuntu2204-12-6-local_12.6.0-560.28.03-1_amd64.deb
+wget https://developer.download.nvidia.com/compute/cuda/12.6.0/local_installers/cuda-repo-ubuntu2204-12-6-local_12.6.0-560.28.03-1_amd64.deb
 dpkg -i cuda-repo-ubuntu2204-12-6-local_12.6.0-560.28.03-1_amd64.deb
 cp /var/cuda-repo-ubuntu2204-12-6-local/cuda-*-keyring.gpg /usr/share/keyrings/
 apt-get update -y
 apt-get install -y cuda-toolkit-12-6
-rm cuda-repo-ubuntu2204-12-6-local_12.6.0-560.28.03-1_amd64.deb
+rm -f cuda-repo-ubuntu2204-12-6-local_12.6.0-560.28.03-1_amd64.deb
 
 # Upgrade pip, wheel, setuptools
 python -m pip install --upgrade pip wheel setuptools
@@ -83,6 +83,10 @@ pyenv activate flower
 # Upgrade pip, wheel and setuptools on flower venv.
 python -m pip install --upgrade pip wheel setuptools
 EOF
+
+# Clean up
+apt-get -y autoremove
+apt-get -y clean
 
 # 5. Create a flag file to indicate the script has run
 touch "$FLAG_FILE"
