@@ -111,6 +111,7 @@ Project dependencies are defined in `pyproject.toml`. Install them in an activat
 
 ```shell
 pip install -e .
+pip install flash-attn --no-build-isolation   # Install FlashAttention-2
 ```
 
 ## Experimental setup

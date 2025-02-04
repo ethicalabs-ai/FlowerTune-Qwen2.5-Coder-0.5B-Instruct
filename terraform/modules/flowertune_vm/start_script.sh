@@ -52,7 +52,7 @@ apt-get install -y cuda-toolkit-12-6
 rm -f cuda-repo-ubuntu2204-12-6-local_12.6.0-560.28.03-1_amd64.deb
 
 # Upgrade pip, wheel, setuptools
-python -m pip install --upgrade pip wheel setuptools
+python -m pip install --upgrade pip wheel setuptools packaging
 
 # Fix permissions for flower's .ssh
 chown -R flower:flower /home/flower/.ssh
@@ -81,7 +81,7 @@ pyenv virtualenv flower
 pyenv activate flower
 
 # Upgrade pip, wheel and setuptools on flower venv.
-python -m pip install --upgrade pip wheel setuptools
+python -m pip install --upgrade pip wheel setuptools packaging
 EOF
 
 # Clean up
