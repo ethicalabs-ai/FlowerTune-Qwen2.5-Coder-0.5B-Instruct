@@ -3,6 +3,6 @@ datasets==2.20.0
 evaluate==0.3.0
 sentencepiece==0.2.0
 protobuf==5.27.1
-bitsandbytes==0.45.0
+bitsandbytes==0.45.1
 hf_transfer==0.1.8
 git+https://github.com/hrshtv/bigcode-evaluation-harness.git@bf923d024066b6bc7980afc9ccbf8411382ea786

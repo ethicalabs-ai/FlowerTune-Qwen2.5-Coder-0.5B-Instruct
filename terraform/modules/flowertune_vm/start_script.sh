@@ -39,7 +39,7 @@ apt-get upgrade -y
 apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
     libreadline-dev libsqlite3-dev curl git libncursesw5-dev xz-utils \
     tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev \
-    python-is-python3 python3-pip pipx
+    python-is-python3 python3-pip pipx g++
 
 # Install CUDA 12.6
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin
@@ -59,7 +59,7 @@ chown -R flower:flower /home/flower/.ssh
 chmod 700 /home/flower/.ssh
 chmod 600 /home/flower/.ssh/authorized_keys 2>/dev/null || true
 
-# 4. Install and configure pyenv for the flower user
+# 4. Install and configure pyenv and eval deps for the flower user
 sudo -i -u flower bash << 'EOF'
 curl -fsSL https://pyenv.run | bash
 export PATH="$HOME/.pyenv/bin:$PATH"
@@ -71,6 +71,17 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 
 # Source .bashrc to have pyenv available immediately
 source ~/.bashrc
+
+# For Hugging Face Login
+git config --global credential.helper store
+
+# Install nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm install 20
 
 # Install Python 3.11.11 and set it global
 pyenv install 3.11.11

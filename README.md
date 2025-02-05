@@ -110,6 +110,8 @@ For an example on how to set up a GPU computing resource on CUDO Compute by usin
 Project dependencies are defined in `pyproject.toml`. Install them in an activated Python environment with:
 
 ```shell
+python -m pip install --upgrade pip wheel setuptools packaging
+
 pip install -e .
 pip install flash-attn --no-build-isolation   # Install FlashAttention-2
 ```
