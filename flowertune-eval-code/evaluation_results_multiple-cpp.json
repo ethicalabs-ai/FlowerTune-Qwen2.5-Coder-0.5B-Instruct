@@ -13,7 +13,7 @@
     "seed": 0,
     "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
     "modeltype": "causal",
-    "peft_model": "../results/2025-01-27_19-25-49/peft_100/",
+    "peft_model": "/home/flower/peft_100/",
     "revision": null,
     "use_auth_token": true,
     "trust_remote_code": false,
