@@ -47,11 +47,11 @@ Below is the training loss plot from the experiment:
 
 ### Evaluation Results (Accuracy)
 
-- **MBPP**:  25.80 %
+- **MBPP**:  25.60 %
 - **HumanEval**: 37.81 %
 - **MultiPL-E (JS)**: 41.00 %
 - **MultiPL-E (C++)**: 32.92 %
-- **Average**: 34.38 %
+- **Average**: 34.34 %
 
 ### Communication Budget
 
