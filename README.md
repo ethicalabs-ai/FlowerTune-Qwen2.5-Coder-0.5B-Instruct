@@ -45,13 +45,15 @@ Below is the training loss plot from the experiment:
 
 ![Training Loss](flowertune-eval-code/train_loss.png)
 
-### Evaluation Results (Accuracy)
+### Evaluation Results (Pass@1 score)
 
 - **MBPP**:  25.60 %
 - **HumanEval**: 37.81 %
 - **MultiPL-E (JS)**: 41.00 %
 - **MultiPL-E (C++)**: 32.92 %
 - **Average**: 34.34 %
+
+The evaluation was conducted on an RTX A4000 16GB.
 
 ### Communication Budget
 
