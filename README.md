@@ -1,6 +1,6 @@
 # FlowerTune LLM on Code Dataset
 
-This directory conducts federated instruction tuning with a pretrained [Qwen/Qwen2.5-Coder-0.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B-Instruct) model on a [Code dataset](https://huggingface.co/datasets/lucasmccabe-lmi/CodeAlpaca-20k).
+This directory conducts federated instruction tuning with a pretrained [Qwen/Qwen2.5-Coder-0.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B-Instruct) model on a [Code dataset](https://huggingface.co/datasets/sahil2801/CodeAlpaca-20k).
 We use [Flower Datasets](https://flower.dev/docs/datasets/) to download, partition and preprocess the dataset.
 Flower's Simulation Engine is used to simulate the LLM fine-tuning process in federated way,
 which allows users to perform the training on a single GPU.
